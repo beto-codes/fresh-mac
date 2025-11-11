@@ -28,4 +28,10 @@ brew update
 echo "Installing packages from Brewfile..."
 brew bundle install --file=Brewfile
 
-echo "Installation complete!"
+# macos settings
+defaults write com.apple.finder AppleShowAllFiles YES
+
+# xcode command line tools
+xcode-select --install
+
+echo "== Installation complete! =="
