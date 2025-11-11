@@ -30,6 +30,7 @@ brew bundle install --file=Brewfile
 
 # macos settings
 defaults write com.apple.finder AppleShowAllFiles YES
+defaults write com.apple.finder AppleShowExtensions YES
 
 # xcode command line tools
 xcode-select --install
