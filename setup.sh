@@ -35,4 +35,7 @@ defaults write com.apple.finder AppleShowExtensions YES
 # xcode command line tools
 xcode-select --install
 
+# directories
+mkdir $HOME/vaults
+
 echo "== Installation complete! =="
