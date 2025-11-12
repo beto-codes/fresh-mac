@@ -7,8 +7,7 @@ echo "== Mac setup script =="
 # Install Homebrew if it's not already installed
 if ! command -v brew &> /dev/null; then
   echo "Homebrew not found. Installing Homebrew"
-  curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
-
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   if [[ $(uname -m) == 'arm64' ]]; then
       echo "Adding Homebrew to PATH for Apple Silicon..."
       echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
@@ -32,10 +31,10 @@ brew bundle install --file=Brewfile
 defaults write com.apple.finder AppleShowAllFiles YES
 defaults write com.apple.finder AppleShowExtensions YES
 
-# xcode command line tools
-xcode-select --install
-
 # directories
-mkdir $HOME/vaults
+mkdir $HOME/vaults $HOME/code
+
+# files
+touch $HOME/.hushlogin
 
 echo "== Installation complete! =="
