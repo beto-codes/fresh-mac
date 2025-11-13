@@ -23,12 +23,12 @@ brew 'stow'
 brew 'mise'
 brew 'starship'
 
-brew gopls
-brew jdtls
-brew rust-analyzer
-brew lua-language-server
-brew llvm
-brew typescript-language-server
+brew 'gopls'
+brew 'jdtls'
+brew 'rust-analyzer'
+brew 'lua-language-server'
+brew 'llvm'
+brew 'typescript-language-server'
 
 cask 'google-chrome'
 cask 'ghostty'
